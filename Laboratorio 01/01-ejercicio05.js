@@ -9,12 +9,11 @@
 const moverPosiciones = ( j, arreglo) => {
     // Con función splice
     // =========================================
-    console.log(arreglo);
-    // funcion con
-    let arrNuevo = arreglo.splice(0, j);
-    console.log(j);
-    let respuesta = arreglo.contact(arrNuevo);
-    return respuesta;
+    // console.log(arreglo);
+    // let numeros = arreglo.splice(0, j);
+    // console.log(j);
+    // let respuesta = arreglo.concat(numeros);
+    // return respuesta;
 
     // Con funcion de for
     // =========================================
@@ -28,14 +27,21 @@ const moverPosiciones = ( j, arreglo) => {
     //     }
     // }
     // return nuevoArreglo;
+
+    // Con función shift
+    // =========================================
+    console.log(arreglo);
+    let shifted = arreglo.shift();
+    return shifted;
 };
 
-let j = +prompt("Ingrese el desplazamiento")
+let j = +prompt("Ingrese el desplazamiento");
 /**
  * Hacer que el usuario ingrese numeros y tener en un arreglo
  */
 let continuar = true;
 let arrNum = [];
+
 do {
     let ingreso = prompt("Ingrese un número o escriba x para dejar de ingresar números");
     if (ingreso === "x") {
@@ -44,5 +50,5 @@ do {
         arrNum.push(+ingreso);
     }
 } while (continuar === true);
-console.log(moverPosiciones(j, arrNum))
+console.log(moverPosiciones(j, arrNum));
 
